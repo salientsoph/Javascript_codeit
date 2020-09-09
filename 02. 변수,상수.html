@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var score = 0;    //var(variable): 변수
+                      //문장이 끝날 때마다 ; 을 찍는다, 마침표처럼.
+
+    var another;
+    another = 0;
+
+    var score1 = 2, score2 = 3; //변수 여러개 정의하기
+
+    const MAX_LEVEL = 99; //대부분 상수 이름은 대문자로 준다. 상수 바꾸지 않을 값만 설정. 엔
+
+
+    var n = 10;
+    var s = '10';
+    var b = true;
+
+    typeof n;   //number
+    typeof s;   //string
+    typeof b;   //boolean
+
+    typeof true;    //boolean
+    typeof 'true';  //string
+
+
+    3+7   //10
+    3-7   //-4
+    3*5   //15
+    8/2   //4
+    7%3   //1(나머지)
+    7+3*2 //13
+
+
+    typeof 3;     //number
+    typeof 3.14;  //number(정수형, 소수형 모두 number)
+
+
+    //x = x + 1;
+    //x += 1;
+    //x++;
+
+    //x = x - 1;
+    //x -= 1;
+    //x--;
+
+    var text1 = '안녕하세요';
+    var text2 = "안녕하세요";
+    //var wrongtext = '안녕하세요"; //에러남. 큰, 작은 따옴표 구분.
+
+    var text3 = "it's cool";
+
+    'hello' + 'world'  //helloworld
+    'hello' + ' world' //hello world
+
+    "2" + "5" //25
+
+
+
+    //boolean
+
+    3>7;  //false
+    7>3;  //true
+
+    typeof (3>7); //boolean
+
+    3 >= 3;  //true
+
+    3 == 3;    //데이터 값만 비교
+    3 === 3;   //데이터 값, 데이터 타입 비교
+
+    3 == '3';   //값이 같아서 true로 나옴 (데이터 값만 같으면 됨. 타입 비교 x)
+    3 === '3';  //값이 같지만 데이터 타입이 달라서 false로 나옴
+
+
+
+    //boolean 연산 (and 연산, or 연산, not 연산)
+    true && true;  //양쪽 다 true일 때만 true. 이때는 true가 나옴
+    true && false; //false
+
+    true || true;  //한쪽이 true 이면 true. 이때는 true
+    true || false;  //true
+    false || false;  //false
+
+    !false;   //true
+    !true;    //false
+
+
+    //예시
+    (7 > 3) && (6 < -1 ); //false
+    (7 > 3) || (6 < -1 ); //true
+    !(7 > 3); //false
+
+
+    //형 변환
+    var scoreString = '10';  //string
+    Number(scoreString);  //number로 형 변환
+
+    typeof scoreString; //string
+    typeof Number(scoreString);  //number
+
+    typeof 20; //number
+    typeof String(20); //string
+
+    //예시
+    var favoriteNumber = window.prompt("가장 좋아하는 숫자를 적어주세요.");
+    console.log(favoriteNumber);
+    typeof favoriteNumber;   //string
+
+    //var favoriteNumber = Number(window.prompt("가장 좋아하는 숫자를 적어주세요.")); //number
+    //console.log favoriteNumber;
+    //typeof favoriteNumber;   //number
+
+
+
+    //배열
+    var brands = ['Apple', 'Coca-cola', 'Starbucks'];
+    var iPad = [800, 'Black', true];    //다양한 타입들의 자료형이 올 수 있음
+
+    typeof brands;  //object
+    typeof iPad;    //object
+
+    brands[1];  //Coca-cola
+    iPad[0];    //800
+
+
+
+    //배'열'과 문자'열'
+
+    var text4 = 'hello';
+    console.log(text4[0]);  //h
+    console.log(text4[3]);  //l
+
+    var text5 = ['h', 'e', 'l', 'l', 'o']
+    console.log(text5[0]);  //h
+    console.log(text5[3]);  //l
+
+    console.log(text4.length);
+    console.log(text5.length);
+
+    console.log(typeof text4);  //string
+    console.log(typeof text5);  //object
+
+    console.log(text4 == text5); //false
+
+    //이 둘은 각 글자에 접근하는 방식만 동일할 뿐, 엄연히 다른 존재다.
+    //배열: 바꾸기 가능, 문자열: 바꾸기 불가
+
+    text4[0] = 'b';     //바꾸기 불가
+    console.log(text4); //hello
+
+    text5[0] = 'b';     //바꾸기 가능
+    console.log(text5); //['b', 'e', 'l', 'l', 'o']
+
+
+    //배열 안의 배열
+    var brands2 = ['Apple', 'Coca-cola', 'Starbucks'];
+    var products = [
+    ['iphone', 'imac', 'macbook'],
+    ['coke', 'dietcoke'],
+    ['americano', 'latte', 'tea']
+    ];
+
+    console.log(brands2);   //['Apple', 'Coca-cola', 'Starbucks']
+    console.log(products);  //[array(3), array(2), array(3)]
+
+    console.log(products[0]);  //['iphone', 'imac', 'macbook']
+    console.log(products[1][1]); //diet coke
+
+    var appleProducts = products[0];
+    console.log(appleProducts[1]);
+
+
+
+    //객체
+    //var person = ['Dongwook', 30, 'Korea'];
+    //console.log(person[1]);
+
+    var person ={
+        name: 'Dongwook',
+        age: 30,
+        nationality: 'Korea'
+    };
+
+    //여기서 name, age, nationality: "property"
+    //'Dongwook', 30, 'Korea': "value"
+
+
+    console.log(typeof person);  //object(배열처럼 여러 값을 묶어서 저장할 수 있음)
+    console.log(person['name']);
+    console.log(person.name);
+    console.log(person['age']);
+    console.log(person.age);
+    console.log(person['nationality']);
+    console.log(person.nationality);
+
+</script>
+
+</body>
+</html>

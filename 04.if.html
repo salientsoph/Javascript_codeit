@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //입력받은 값이 7 이면 lucky 띄우기
+
+    //var inputNumber = window.prompt("한 자리 숫자를 적어주세요.");
+    //console.log(inputNumber);
+    //console.log(typeof inputNumber);
+
+    //if문
+    //if (조건부분){조건부분이 true면 실행되는 부분}
+
+<!--    if (inputNumber === '7'){-->
+<!--        alert('Lucky!');-->
+<!--    }-->
+<!--    else if (inputNumber === '0'){-->
+<!--        alert('Zero');-->
+<!--    }-->
+<!--    else if (inputNumber === '1'){-->
+<!--        alert('One');-->
+<!--    }-->
+<!--    else{-->
+<!--        alert('Unlucky');-->
+<!--    }-->
+
+
+
+
+    var num = 14;
+
+    if (num % 2 === 0 && num % 3 === 0){
+        console.log(num+'은 6의 배수입니다.');
+    }
+    else{
+        console.log(num+'은 6의 배수가 아닙니다.');
+    }
+
+
+
+
+
+
+    //switch문
+
+    var inputNumber = window.prompt("한 자리 숫자를 적어주세요.");
+
+    switch(inputNumber){
+        case '0':
+            alert('Zero!');
+            break;
+        case '1':
+            alert('one!');
+            break;
+        case '7':
+            alert('Lucky!');
+            break;
+        default:
+            alert('Unlucky!');
+            break;
+    }
+    //예를 들어 break가 7에만 있고, 1을 입력했다면 --> one, lucky가 나온다.
+    //원하는 동작을 다 했으면 그 뒤에 break를 꼭 써준다.
+
+
+    var score = 85;
+
+    if (score>70){
+        alert("잘 하셨습니다!");
+    }
+
+    switch(score){
+        case 71:
+            alert("잘 하셨습니다!");
+        case 72:
+            alert("잘 하셨습니다!");
+        case 73:
+            alert("잘 하셨습니다!");
+    }
+    //대소비교, 조건복잡, 범위 ---> if
+
+
+
+
+
+
+    /*
+    A코스: 짜장면 짬뽕 탕수육 양장피 팔보채
+    B코스: 유산슬 짜장면 짬뽕 탕수육 양장피 팔보채
+    C코스: 게살스프 칠리새우 유산슬 짜장면 짬뽕 탕수육 양장피 팔보채
+    */
+
+    /*
+    var courseName = 'A';
+
+    switch(courseName){
+    case 'A':
+        console.log('짜장면 짬뽕 탕수육 양장피 팔보채');
+    case 'B':
+        console.log('유산슬 짜장면 짬뽕 탕수육 양장피 팔보채');
+    case 'C':
+        console.log('게살스프 칠리새우 유산슬 짜장면 짬뽕 탕수육 양장피 팔보채');
+    default:
+        console.log('주문이 잘못되었습니다.');
+        break;
+}   */
+
+
+
+
+    var courseName = 'A';
+    //var courseName = 'B';
+    //var courseName = 'C';
+    
+    switch(courseName){
+    case 'C':
+        console.log('게살스프 칠리새우');
+    case 'B':
+        console.log('유산슬');
+    case 'A':
+        console.log('짜장면 짬뽕 탕수육 양장피 팔보채');
+        break;
+    default:
+        console.log('주문이 잘못되었습니다.');
+        break;
+}
+
+
+
+</script>
+
+</body>
+</html>
